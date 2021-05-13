@@ -4,6 +4,6 @@ No âmbito da disciplina de POO e ES, será realizado um jogo de tabuleiro feito
 
 Membros do grupo :
 
-Diogo Pereira
+-Diogo Pereira
 
-Renato Oliveira
+-Renato Oliveira
