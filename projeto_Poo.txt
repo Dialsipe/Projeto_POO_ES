@@ -41,8 +41,9 @@ Arena/Tabuleiro:
 Regras:
 	Combate:
 		Caso
-		-uma carta tem um valor maximo de dano e é lançado o dado para obter esse valor.
-		-
+		//-uma carta tem um valor maximo de dano e é lançado o dado para obter esse valor.
+		-Se a carta tiver vantagem sobre a outra, ganha a que tiver vantagem.
+		-Se o poder da carta for 10 a mais que o outro mesmo que tenha desvantagem ganha o duelo.
 	
 	Acontecimentos:
 		-certas casas do tabuleiro afetam o jogo
@@ -55,6 +56,7 @@ Regras:
 
 	Formas de acabar o jogo:
 		-O 1º Chegar ao ponto de chegada (casa-40)
-		-O ultimo jogador presente no tabuleiro - está opção só acontece se os restantes jogadores calharem na casa da morte
+		-O ultimo jogador presente no tabuleiro - esta opção só acontece se os restantes jogadores calharem na casa da morte
 	 
+
 		
