@@ -1,4 +1,0 @@
-metodo aplicarEfeito : metodo abstrata da casa
-o metodo serve para dar return para a posição do jogador
-
-na classe jogo tem de ser feito um random da escolha das cartas por jogador.
