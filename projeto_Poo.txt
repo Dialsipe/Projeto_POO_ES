@@ -1,0 +1,66 @@
+tema:
+-jogo de mesa com tabuleiro
+-há uma casa de partida e chegada
+-lançamento de dados
+-tabuleiro divido em casas
+
+Classes:
+Carta:
+	Atributos:
+		-elemento
+			vt- vantagem; dvt- desvantagem
+			água vt . fogo terra dvt. planta eletrico
+			fogo vt. planta dvt. agua, terra
+			elétrico vt. agua dvt. terra
+			terra vt. eletrico fogo dvt. agua planta
+			planta vt. agua terra dvt fogo
+		-nível(1-3)
+
+Baralho: - 
+	Atributos:
+		-Arraylist (Carta)
+
+Jogador:
+	Atributos:
+		-nome
+		-cartasEmMao -3
+		
+Jogada:
+		-dado
+	Atributos:
+		-numeroDePassos
+
+
+
+Arena/Tabuleiro: 
+	Atributos:
+		-fimDoJogo - boolean
+		-acontecimento
+		-tamanho (40) - será o tamanho do tabuleiro (guardado num array)
+
+Regras:
+	Duelo:
+		Caso
+		//-uma carta tem um valor maximo de dano e é lançado o dado para obter esse valor.
+		-Se a carta tiver vantagem sobre a outra, ganha a que tiver vantagem.
+		-Se a carta com desvantagem tiver 2 niveis superiores então ela ganha o duelo
+		-O vencedor do duelo avança 3 casas e o perdedor recua 3 
+	
+	Acontecimentos:
+		-certas casas do tabuleiro afetam o jogo
+		-Casa do duelo: 13 - 25 - 37
+		-Casa Das Cartas - recebe uma nova carta: 2-5-11-18-22-30
+		-Casa da Morte - o elimina um jogador da partida: 35
+		-Casa da Agilidade - o jogador avança 4 casas: 8-21-32
+		-Casa do Azar - o jogador recua 3 casas: 16-29-39
+		-Sempre que haja mais de um jogador numa casa neutra acontece um duelo
+
+	Formas de acabar o jogo:
+		-O 1º Chegar ao ponto de chegada (casa-40)
+		-O ultimo jogador presente no tabuleiro - esta opção só acontece se os restantes jogadores calharem na casa da morte
+	 
+
+metodo aplicarEfeito : metodo abstrata da casa
+o metodo serve para dar return para a posição do jogador
+
+na classe jogo tem de ser feito um random da escolha das cartas por jogador.
