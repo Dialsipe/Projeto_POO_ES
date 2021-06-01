@@ -1,0 +1,46 @@
+//Baralhar	
+//	for (int i = 0; i < deck.length; i++) {
+//	    int j = (int)(Math.random() * deck.length); // Get a random index out of 52
+//	    int temp = deck[i]; // Swap the cards
+//	    deck[i] = deck[j];
+//	    deck[j] = temp;
+//	}
+
+private static final int DECK_SIZE = 52;
+
+    public static void main(String args[]) {
+        ArrayList<Integer> deck = new ArrayList<Integer>();
+
+        for (int i = 0; i < DECK_SIZE; ++i) {
+            deck.add(i);
+        }
+
+        ArrayList<Integer> shuffledDeck = new ArrayList<Integer>();
+
+        while (deck.size() > 0) {
+            int index = (int) (Math.random() * deck.size());
+            shuffledDeck.add(deck.remove(index));
+        }
+public class Test {
+    private static final int DECK_SIZE = 52;
+
+    public static void main(String args[]) {
+        ArrayList<Integer> deck = new ArrayList<Integer>();
+
+        for (int i = 0; i < DECK_SIZE; ++i) {
+            deck.add(i);
+        }
+
+        Collections.shuffle(deck);
+
+        System.out.println(deck);
+boolean init[] = new boolean[52];
+Random r = new Random();
+
+int getNextCard(){
+    int i = r.nextInt(52);
+    while(init[i])
+        i = r.nextInt(52);
+    init[i] = true;
+    return i;
+}
